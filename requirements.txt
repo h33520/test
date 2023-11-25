@@ -104,7 +104,6 @@ python-dateutil==2.8.2
 python-multipart==0.0.6
 pytz==2020.1
 PyWavelets==1.4.1
-pywin32==306
 pywinpty==2.0.12
 PyYAML==6.0.1
 pyzmq==25.1.1
