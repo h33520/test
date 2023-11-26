@@ -121,9 +121,9 @@ if st.button("Predict"):
 
     # 根据预测结果输出文本
     if prediction_result[0] == 0:
-        prediction_text = "红酒质量较差"
+        prediction_text = "葡萄酒质量较差"
     else:
-        prediction_text = "红酒质量较好"
+        prediction_text = "葡萄酒质量较好"
 
     # 显示预测结果
     st.subheader("Prediction:")
