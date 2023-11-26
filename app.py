@@ -24,17 +24,17 @@ df = pd.read_csv('winequalityN.csv')
 st.title("Wine Quality Prediction App")
 
 # 用户输入
-fixed_acidity = st.slider("Fixed Acidity", float(df["fixed acidity"].min()), float(df["fixed acidity"].max()))
-volatile_acidity = st.slider("Volatile Acidity", float(df["volatile acidity"].min()), float(df["volatile acidity"].max()))
-citric_acid = st.slider("Citric Acid", float(df["citric acid"].min()), float(df["citric acid"].max()))
-residual_sugar = st.slider("Residual Sugar", float(df["residual sugar"].min()), float(df["residual sugar"].max()))
-chlorides = st.slider("Chlorides", float(df["chlorides"].min()), float(df["chlorides"].max()))
-free_sulfur_dioxide = st.slider("Free Sulfur Dioxide", float(df["free sulfur dioxide"].min()), float(df["free sulfur dioxide"].max()))
-total_sulfur_dioxide = st.slider("Total Sulfur Dioxide", float(df["total sulfur dioxide"].min()), float(df["total sulfur dioxide"].max()))
-density = st.slider("Density", float(df["density"].min()), float(df["density"].max()))
-pH = st.slider("pH", float(df["pH"].min()), float(df["pH"].max()))
-sulphates = st.slider("Sulphates", float(df["sulphates"].min()), float(df["sulphates"].max()))
-alcohol = st.slider("Alcohol", float(df["alcohol"].min()), float(df["alcohol"].max()))
+fixed_acidity = st.slider("Fixed Acidity（固定酸度）", float(df["fixed acidity"].min()), float(df["fixed acidity"].max()))
+volatile_acidity = st.slider("Volatile Acidity（挥发酸）", float(df["volatile acidity"].min()), float(df["volatile acidity"].max()))
+citric_acid = st.slider("Citric Acid（柠檬酸）", float(df["citric acid"].min()), float(df["citric acid"].max()))
+residual_sugar = st.slider("Residual Sugar（残糖）", float(df["residual sugar"].min()), float(df["residual sugar"].max()))
+chlorides = st.slider("Chlorides（氯化物）", float(df["chlorides"].min()), float(df["chlorides"].max()), format="%.3f")
+free_sulfur_dioxide = st.slider("Free Sulfur Dioxide（游离二氧化硫）", float(df["free sulfur dioxide"].min()), float(df["free sulfur dioxide"].max()))
+total_sulfur_dioxide = st.slider("Total Sulfur Dioxide（总二氧化硫）", float(df["total sulfur dioxide"].min()), float(df["total sulfur dioxide"].max()))
+density = st.slider("Density（密度）", float(df["density"].min()), float(df["density"].max()), format="%.4f")
+pH = st.slider("pH（酸碱度）", float(df["pH"].min()), float(df["pH"].max()))
+sulphates = st.slider("Sulphates（硫酸盐）", float(df["sulphates"].min()), float(df["sulphates"].max()))
+alcohol = st.slider("Alcohol（酒精）", float(df["alcohol"].min()), float(df["alcohol"].max()))
 
 
 # 添加按钮
@@ -128,4 +128,3 @@ if st.button("Predict"):
     # 显示预测结果
     st.subheader("Prediction:")
     st.write(f"The predicted wine quality is: {prediction_result[0]}，{prediction_text}")
-
