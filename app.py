@@ -31,7 +31,7 @@ residual_sugar = st.slider("Residual Sugar（残糖）", float(df["residual suga
 chlorides = st.slider("Chlorides（氯化物）", float(df["chlorides"].min()), float(df["chlorides"].max()), format="%.3f")
 free_sulfur_dioxide = st.slider("Free Sulfur Dioxide（游离二氧化硫）", float(df["free sulfur dioxide"].min()), float(df["free sulfur dioxide"].max()))
 total_sulfur_dioxide = st.slider("Total Sulfur Dioxide（总二氧化硫）", float(df["total sulfur dioxide"].min()), float(df["total sulfur dioxide"].max()))
-density = st.slider("Density（密度）", float(df["density"].min()), float(df["density"].max()), format="%.4f")
+density = st.slider("Density（密度）", float(df["density"].min()), float(df["density"].max()), step=0.0001)
 pH = st.slider("pH（酸碱度）", float(df["pH"].min()), float(df["pH"].max()))
 sulphates = st.slider("Sulphates（硫酸盐）", float(df["sulphates"].min()), float(df["sulphates"].max()))
 alcohol = st.slider("Alcohol（酒精）", float(df["alcohol"].min()), float(df["alcohol"].max()))
