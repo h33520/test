@@ -18,7 +18,7 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
         print(os.path.join(dirname, filename))
 
 #导入数据库
-df = pd.read_csv('/homework/homework2/winequalityN.csv')
+df = pd.read_csv('winequalityN.csv')
 
 #检查数据库中是否有空值
 df.isnull().sum()
