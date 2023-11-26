@@ -24,6 +24,7 @@ df = pd.read_csv('winequalityN.csv')
 st.title("Wine Quality Prediction App")
 
 # 用户输入
+st.write(f"提示：您可以通过滑动滑块来进行参数的设定！")
 fixed_acidity = st.slider("Fixed Acidity（固定酸度）", float(df["fixed acidity"].min()), float(df["fixed acidity"].max()))
 volatile_acidity = st.slider("Volatile Acidity（挥发酸）", float(df["volatile acidity"].min()), float(df["volatile acidity"].max()))
 citric_acid = st.slider("Citric Acid（柠檬酸）", float(df["citric acid"].min()), float(df["citric acid"].max()))
@@ -35,7 +36,7 @@ density = st.slider("Density（密度）", float(df["density"].min()), float(df[
 pH = st.slider("pH（酸碱度）", float(df["pH"].min()), float(df["pH"].max()))
 sulphates = st.slider("Sulphates（硫酸盐）", float(df["sulphates"].min()), float(df["sulphates"].max()))
 alcohol = st.slider("Alcohol（酒精）", float(df["alcohol"].min()), float(df["alcohol"].max()))
-
+st.write(f"提示：设定完毕之后请点击“predict”按钮，稍作等待即可查看预测结果！")
 
 # 添加按钮
 if st.button("Predict"):
