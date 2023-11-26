@@ -121,4 +121,14 @@ if st.button("Predict"):
     
     # 显示预测结果
     st.subheader("Prediction:")
-    st.write(f"The predicted wine quality is: {prediction_result[0]}")
+    
+    # 根据预测结果输出文本
+    if prediction_result[0] == 0:
+        prediction_text = "红酒质量较差"
+    else:
+        prediction_text = "红酒质量较好"
+
+    # 显示预测结果
+    st.subheader("Prediction:")
+    st.write(f"The predicted wine quality is: {prediction_result[0]}，{prediction_text}")
+
