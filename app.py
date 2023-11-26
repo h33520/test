@@ -118,10 +118,7 @@ if st.button("Predict"):
 
     # 预测结果
     prediction_result = model.predict(combined_df.iloc[user_index, :].values.reshape(1, -1))
-    
-    # 显示预测结果
-    st.subheader("Prediction:")
-    
+
     # 根据预测结果输出文本
     if prediction_result[0] == 0:
         prediction_text = "红酒质量较差"
