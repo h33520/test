@@ -21,7 +21,7 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
 df = pd.read_csv('winequalityN.csv')
 
 # Streamlit 应用
-st.title("Wine Quality Prediction App")
+st.title("Wine Quality Prediction")
 
 # 用户输入
 st.write(f"提示：您可以通过滑动滑块来进行参数的设定！")
